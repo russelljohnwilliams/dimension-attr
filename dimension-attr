@@ -1,0 +1,15 @@
+add_action('wp_footer', 'add_dimension_attr');
+function add_dimension_attr(){
+?>
+<script>
+	jQuery(window).load(function () {
+		jQuery( "img" ).each(function() {
+			var height =   jQuery( this ).height();
+			var width =   jQuery( this ).width();
+			jQuery( this ).attr("height", height).attr("width", width)
+		});
+
+	})
+</script>
+<?php
+}
